@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO DEEP PRODUCTIONS</title>
+    <!-- Brivane Font -->
+    <link href="https://fonts.cdnfonts.com/css/brivane" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1783031505230475264/4L2VUv3c_400x400.jpg">
+    <style>
+        /* BRIVANE FONT SETUP */
+        body, button, h1, h2, h3, p, a, .ticker-content {
+            font-family: 'Brivane', sans-serif;
+        }
+        
+        /* CORE STYLES */
+        body {
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            font-size: 3.8em;
+            text-shadow: 5px 5px 0 #FF00FF, -5px -5px 0 #00FFFF;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+        
+        h2 {
+            font-size: 2.4em;
+            text-shadow: 3px 3px 0 #000;
+            letter-spacing: 2px;
+        }
+        
+        /* HEADER */
+        header {
+            background: linear-gradient(45deg, #FF00FF, #00FFFF, #FF00FF);
+            padding: 30px 20px;
+            margin-bottom: 20px;
+        }
+        
+        /* PROFILE PIC */
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #FF00FF;
+            margin-right: 15px;
+            box-shadow: 0 0 15px #00FFFF, 0 0 25px #FF00FF;
+            animation: pulse 2s infinite alternate;
+            object-fit: cover;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px #00FFFF, 0 0 25px #FF00FF; }
+            100% { box-shadow: 0 0 25px #00FFFF, 0 0 35px #FF00FF; }
+        }
+        
+        /* SPORTS TICKER */
+        .sports-ticker {
+            background: linear-gradient(90deg, #FF00FF, #000, #00FFFF);
+            overflow: hidden;
+            padding: 15px 0;
+            font-size: 1.3em;
+            border-bottom: 3px solid #00FFFF;
+            border-top: 3px solid #FF00FF;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+            padding-left: 100%;
+            white-space: nowrap;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* LAYOUT SYSTEM */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-wrap: wrap;
+            gap: 20px; /* Added gap between boxes */
+        }
+        
+        .main-content {
+            flex: 2;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Consistent spacing */
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Consistent spacing */
+        }
+        
+        /* CONTENT BOXES */
+        .content-box {
+            background: rgba(0,0,0,0.85);
+            border: 4px solid #00FFFF;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 0 20px rgba(0,255,255,0.6);
+            width: 100%;
+            box-sizing: border-box; /* Fixes padding overflow */
+        }
+        
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            margin: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #FF00FF, #00FFFF);
+            color: #000;
+        }
+        
+        .btn-instagram {
+            background: linear-gradient(45deg, #405DE6, #833AB4, #E1306C);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* GAME CANVAS */
+        #game {
+            border: 3px solid #00FFFF;
+            background: #000;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8em; }
+            h2 { font-size: 1.8em; }
+            .sports-ticker { font-size: 1em; }
+            
+            .container {
+                flex-direction: column;
+            }
+            
+            .main-content, .sidebar {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- DYNAMIC SPORTS TICKER -->
+    <div class="sports-ticker">
+        <div class="ticker-content">
+            🏒 NHL: Playoff Updates | 🏎️ F1: Next Race - Miami GP | 🥊 UFC: Fight Night Results | 
+            🏁 NASCAR: Coca-Cola 600 Highlights | ⚾ MLB: Live Scores | 🤼 WWE: SummerSlam Highlights | 
+            🏎️ F1: Verstappen Pole Position | 🏁 NASCAR: Chase Elliott Wins | 🤼 WWE: Raw Results | 
+            🏎️ F1: Constructor Standings | 🏁 NASCAR: Playoff Picture | ⚾ MLB: Trade Rumors
+        </div>
+    </div>
+
+    <header>
+        <h1>GO DEEP PRODUCTIONS</h1>
+        <p style="font-size:1.8em; text-shadow:2px 2px 0 #000;">THE WILDEST SHOW ON EARTH!</p>
+    </header>
+
+    <div class="container">
+        <!-- MAIN CONTENT COLUMN -->
+        <div class="main-content">
+            <!-- GEAR BUTTON -->
+            <div class="content-box">
+                <a href="https://instagram.com/chelseyscraftcorner25" target="_blank" class="btn btn-primary">🔥 BUY OUR GEAR 🔥</a>
+            </div>
+
+            <!-- PODCAST SECTION -->
+            <div class="content-box">
+                <h2 style="color: #00FFFF; display: flex; align-items: center; justify-content: center;">
+                    <img src="https://pbs.twimg.com/profile_images/1783031505230475264/4L2VUv3c_400x400.jpg" class="profile-pic">
+                    🎙️ GO DEEP: THE PODCAST
+                </h2>
+                <div style="text-align: left;">
+                    <p><strong>Hosted by John</strong>, this is the ultimate hang out for guys who miss <strong>real conversations at the bar</strong> — where the jokes come fast, the takes burn hotter than the wings, and nothing's off-limits (but nobody's a dick about it).</p>
+                    
+                    <h3 style="color: #FF00FF;">🚨 DOG FOOKERS SUNSET ALERT</h3>
+                    <p>After <strong>7 legendary episodes</strong> of unfiltered madness, our beloved/notorious side project <em>Dog Fookers</em> is signing off.</p>
+                    
+                    <h3 style="color: #00FFFF;">🍻 WHY THIS SHOW?</h3>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Vibe:</strong> Like your funniest friends debating everything</li>
+                        <li><strong>For fans of:</strong> Matt and Shane's Secret Podcast, Are You Garbage?</li>
+                        <li><strong>New episodes?</strong> Coming when the minivan's in park.</li>
+                    </ul>
+                </div>
+                
+                <!-- PODCAST PLAYER -->
+                <iframe title="Dogfookers E7" src="https://www.podbean.com/player-v2/?i=fnnxz-16c6662-pb" width="100%" height="150px" style="border:none; margin-top: 20px;"></iframe>
+                
+                <a href="https://feed.podbean.com/godeepthepodcast/feed.xml" class="btn btn-primary">SUBSCRIBE VIA RSS</a>
+            </div>
+
+            <!-- SNAKE GAME -->
+            <div class="content-box">
+                <h2 style="color: #FF00FF;">PLAY SNAKE!</h2>
+                <canvas id="game" width="400" height="400"></canvas>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="content-box">
+                <h2 style="color: #00FFFF;">CONTACT THE SHOW</h2>
+                <a href="mailto:godeepthepodcast@gmail.com" class="btn btn-primary">📩 EMAIL US DIRECTLY</a>
+                <p style="margin-top: 20px;">Or DM us on <a href="https://instagram.com/godeepproductions" style="color:#00FFFF;">Instagram</a>!</p>
+            </div>
+        </div>
+
+        <!-- SOCIAL MEDIA SIDEBAR -->
+        <div class="sidebar">
+            <div class="content-box">
+                <h2 style="color: #FF00FF;">CONNECT WITH US</h2>
+                <a href="https://twitter.com/Gdp37199956" class="btn btn-primary">𝕏 TWITTER/X</a>
+                <a href="https://instagram.com/godeepproductions" class="btn btn-instagram">📸 INSTAGRAM</a>
+                <a href="https://tiktok.com/@godeepproductions" class="btn btn-primary">🎵 TIKTOK</a>
+                <a href="https://youtube.com/@godeepproductions" class="btn btn-primary">▶️ YOUTUBE</a>
+            </div>
+            
+            <!-- SPONSORS SECTION -->
+            <div class="content-box">
+                <h2>FUTURE SPONSORS</h2>
+                <p>Want your brand here? Contact us!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SNAKE GAME SCRIPT -->
+    <script>
+        const canvas = document.getElementById("game");
+        const ctx = canvas.getContext("2d");
+        canvas.width = 400;
+        canvas.height = 400;
+        let snake = [{x: 200, y: 200}];
+        let food = {x: 100, y: 100};
+        let dx = 20, dy = 0;
+        
+        function draw() {
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#00FF00";
+            snake.forEach(segment => {
+                ctx.fillRect(segment.x, segment.y, 18, 18);
+                ctx.strokeStyle = "#000";
+                ctx.strokeRect(segment.x, segment.y, 18, 18);
+            });
+            ctx.fillStyle = "#FF00FF";
+            ctx.beginPath();
+            ctx.arc(food.x + 10, food.y + 10, 9, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        function update() {
+            const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+            snake.unshift(head);
+            if (head.x === food.x && head.y === food.y) {
+                food = {
+                    x: Math.floor(Math.random() * 20) * 20,
+                    y: Math.floor(Math.random() * 20) * 20
+                };
+            } else {
+                snake.pop();
+            }
+        }
+        
+        document.addEventListener("keydown", e => {
+            if (e.key === "ArrowUp" && dy !== 20) dx = 0, dy = -20;
+            if (e.key === "ArrowDown" && dy !== -20) dx = 0, dy = 20;
+            if (e.key === "ArrowLeft" && dx !== 20) dx = -20, dy = 0;
+            if (e.key === "ArrowRight" && dx !== -20) dx = 20, dy = 0;
+        });
+        
+        setInterval(() => {
+            update();
+            draw();
+        }, 100);
+    </script>
+</body>
+</html>
